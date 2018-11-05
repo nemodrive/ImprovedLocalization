@@ -1,0 +1,24 @@
+map:
+  occupancy_map: "maps/upb_10cm_1px.png"
+  semantic_map: "maps/semantic_upb.png"
+  lane_map: "maps/upb_lanes_big.png"
+  scale_px_cm: 10.0
+
+  map_labels: [
+      ['ground'               , [ 81,  0, 81] ],
+      ['road'                 , [128, 64,128] ],
+      ['sidewalk'             , [244, 35,232] ],
+      ['parking'              , [250,170,160] ],
+      ['rail track'           , [230,150,140] ],
+  ]
+
+localization:
+  normal_orientation: 45.
+  no_particles: 1000
+  no_workers: 1
+
+test:
+  ground_truth_point_path: data/test_1
+  sim_noise_pos: 300. # Radius cm
+  sim_noise_direction: 5. # +/- angles degrees
+  accuracy: 300.0
